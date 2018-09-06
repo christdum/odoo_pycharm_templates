@@ -1,0 +1,251 @@
+<templateSet group="Odoo XML">
+  <template name="odoo_button_object" value="&lt;button name=&quot;action_$button_name$&quot; type=&quot;object&quot; string=&quot;$TextButton$&quot;/&gt;" description="Add Odoo button" toReformat="true" toShortenFQNames="true">
+    <variable name="button_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TextButton" expression="" defaultValue=" " alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_xpath" value="&lt;xpath expr=&quot;//field[@name='name']&quot; position=&quot;&quot;&gt;&#10;    &lt;!-- Add your fields or attributes here --&gt;&#10;&lt;/xpath&gt;" description="Add the structure of xpath" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_xpath_attributes" value="&lt;xpath expr=&quot;//field[@name='']&quot; position=&quot;attributes&quot;&gt;&#10;    &lt;attribute name=&quot;required&quot;&gt;1&lt;/attribute&gt;&#10;    &lt;attribute name=&quot;readonly&quot;&gt;1&lt;/attribute&gt;&#10;&lt;/xpath&gt;" description="Add the structure of xpath with attributes" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_tree" value="&lt;record id=&quot;$record_id$_tree_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$tree_name$ Tree View&lt;/field&gt;&#10;    &lt;field name=&quot;model&quot;&gt;$modelName$&lt;/field&gt;&#10;    &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;        &lt;tree string=&quot;$treeTitle$&quot;&gt;&#10;            &lt;field name=&quot;$name$&quot;/&gt;&#10;        &lt;/tree&gt;&#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="Create Tree View" toReformat="false" toShortenFQNames="true">
+    <variable name="record_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tree_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="modelName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="treeTitle" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_tree_inherit" value="&lt;record id=&quot;$inherited_tree_id$_inherited_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$tree_name$ Inherited view&lt;/field&gt;&#10;    &lt;field name=&quot;model&quot;&gt;$modelName$&lt;/field&gt;&#10;    &lt;field name=&quot;inherit_id&quot; ref=&quot;$module$.$inherited_tree_id$&quot;/&gt;&#10;    &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;        &lt;!-- Inherite fields here --&gt;&#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="Inherit Existing Tree View" toReformat="false" toShortenFQNames="true">
+    <variable name="inherited_tree_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tree_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="modelName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_action_act_windows" value="&lt;record id=&quot;$record_id$_action&quot; model=&quot;ir.actions.act_window&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$name$ Action&lt;/field&gt;&#10;    &lt;field name=&quot;res_model&quot;&gt;$model$&lt;/field&gt;&#10;    &lt;field name=&quot;view_type&quot;&gt;form&lt;/field&gt;&#10;    &lt;field name=&quot;view_mode&quot;&gt;tree,form&lt;/field&gt;&#10;    &lt;field name=&quot;view_id&quot; ref=&quot;$ref_view$&quot;/&gt;&#10;    &lt;!--&lt;field name=&quot;domain&quot;&gt;[]&lt;/field&gt;--&gt;&#10;    &lt;!--&lt;field name=&quot;context&quot;&gt;{}&lt;/field&gt;--&gt;&#10;    &lt;field name=&quot;help&quot; type=&quot;html&quot;&gt;&#10;      &lt;p class=&quot;oe_view_nocontent_create&quot;&gt;&#10;        &lt;!-- Add Text Here --&gt;&#10;      &lt;/p&gt;&lt;p&gt;&#10;        &lt;!-- More details about what a user can do with this object will be OK --&gt; &#10;      &lt;/p&gt;&#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="Create new Action" toReformat="false" toShortenFQNames="true">
+    <variable name="record_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ref_view" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_search_view" value="&lt;record id=&quot;$record_id$_search_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$record_name$ Search View&lt;/field&gt;&#10;    &lt;field name=&quot;model&quot;&gt;$model_name$&lt;/field&gt;&#10;    &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;        &lt;search string=&quot;Search&quot;&gt;&#10;            &lt;field name=&quot;$name$&quot; string=&quot;$string$&quot; domain=&quot;[]&quot;/&gt;&#10;        &lt;/search&gt;&#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="Create Search View" toReformat="false" toShortenFQNames="true">
+    <variable name="record_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="record_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_security_category" value="&lt;record id=&quot;$record_id$&quot; model=&quot;ir.module.category&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;&lt;/field&gt;&#10;    &lt;field name=&quot;sequence&quot; eval=&quot;1&quot;/&gt;&#10;&lt;/record&gt;" description="Add new Security Category" toReformat="false" toShortenFQNames="true">
+    <variable name="record_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_security_group" value="&lt;record id=&quot;&quot; model=&quot;res.groups&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;&lt;/field&gt;&#10;    &lt;field name=&quot;category_id&quot; ref=&quot;&quot;/&gt;&#10;    &lt;field name=&quot;implied_ids&quot; eval=&quot;[(4, ref('base.group_user'))]&quot;/&gt;&#10;&lt;/record&gt;" description="Create new Group, then assign new permissions" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_security_rule" value="&lt;record id=&quot;&quot; model=&quot;ir.rule&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;&lt;/field&gt;&#10;    &lt;field ref=&quot;model_name_of_model&quot; name=&quot;model_id&quot;/&gt;&#10;    &lt;field name=&quot;domain_force&quot;&gt;[('', '', )]&lt;/field&gt;&#10;    &lt;field name=&quot;perm_write&quot; eval=&quot;$perm_write$&quot;/&gt;&#10;    &lt;field name=&quot;perm_create&quot; eval=&quot;$perm_create$&quot;/&gt;&#10;    &lt;field name=&quot;perm_read&quot; eval=&quot;$perm_read$&quot;/&gt;&#10;    &lt;field name=&quot;perm_unlink&quot; eval=&quot;$perm_unlink$&quot;/&gt;&#10;    &lt;!-- You can attach this rule to a specific group, Or make it Global --&gt;&#10;    &lt;field name=&quot;groups&quot; eval=&quot;[(4, ref('$module$.$group_id$'))]&quot;/&gt;&#10;    &lt;!--&lt;field name=&quot;global&quot; eval=&quot;1&quot;/&gt; --&gt;&#10;&lt;/record&gt;" description="Create new Security Rules" toReformat="false" toShortenFQNames="true">
+    <variable name="perm_write" expression="enum(&quot;1&quot;,&quot;0&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="perm_create" expression="enum(&quot;1&quot;,&quot;0&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="perm_read" expression="enum(&quot;1&quot;,&quot;0&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="perm_unlink" expression="enum(&quot;1&quot;,&quot;0&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="group_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_page" value="&lt;page name=&quot;$page_name$_page&quot; string=&quot;$page_string$&quot;&gt;&#10;    &lt;group&gt;&#10;        &lt;field name=&quot;$name$&quot;/&gt;&#10;    &lt;/group&gt;&#10;&lt;/page&gt;" description="Add new page" toReformat="false" toShortenFQNames="true">
+    <variable name="page_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="page_string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_notebook" value="&lt;notebook&gt;&#10;    &lt;page name=&quot;$page_name$_page&quot; string=&quot;$page_string$&quot;&gt;&#10;        &lt;group&gt;&#10;            &lt;field name=&quot;$name$&quot;/&gt;&#10;        &lt;/group&gt;&#10;    &lt;/page&gt;&#10;&lt;/notebook&gt;" description="Add Notebook and a page" toReformat="false" toShortenFQNames="true">
+    <variable name="page_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="page_string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_nested_group" value="&lt;group string=&quot;&quot;&gt;&#10;    &lt;group&gt;&#10;        &lt;field name=&quot;&quot;/&gt;&#10;    &lt;/group&gt;&#10;    &lt;group&gt;&#10;        &lt;field name=&quot;&quot;/&gt;&#10;    &lt;/group&gt;&#10;&lt;/group&gt;" description="Create Nested Groups" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_menuitem_root" value="&lt;!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action --&gt;&#10;&lt;menuitem id=&quot;$menu_id$&quot; name=&quot;$name$&quot; sequence=&quot;$sequence$&quot;/&gt;" description="Create New Menu Item in the Upper bar" toReformat="false" toShortenFQNames="true">
+    <variable name="menu_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="sequence" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_menuitem_categ" value="&lt;!-- This Menu Item Must have a parent --&gt;&#10;&lt;menuitem id=&quot;$menu_id$&quot; name=&quot;$name$&quot; parent=&quot;$parent$&quot; sequence=&quot;$sequence$&quot;/&gt;" description="Create New Menu Item for Categroization" toReformat="false" toShortenFQNames="true">
+    <variable name="menu_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="parent" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="sequence" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_menuitem_action" value="&lt;!-- This Menu Item must have a parent and an action --&gt;&#10;&lt;menuitem id=&quot;$menuId$&quot; name=&quot;$menuName$&quot; parent=&quot;$parent$&quot; action=&quot;$action$&quot; sequence=&quot;$sequence$&quot;/&gt;" description="Create New Menu Item for Actions" toReformat="false" toShortenFQNames="true">
+    <variable name="menuId" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="menuName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="parent" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="sequence" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_form_inherit" value="&lt;!-- Inherit Form View to Modify it --&gt;&#10;&lt;record id=&quot;$inherited_record_id_name$_inherited&quot; model=&quot;ir.ui.view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$recordName$ Inherited view&lt;/field&gt;&#10;    &lt;field name=&quot;model&quot;&gt;$model_name$&lt;/field&gt;&#10;    &lt;field name=&quot;inherit_id&quot; ref=&quot;$module$.$inherited_record_id_name$&quot;/&gt;&#10;    &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;        &#10;        &lt;field name=&quot;$inherited_field$&quot; position=&quot;$position$&quot;&gt;&#10;            &lt;!-- Add your fields or attributes here --&gt;&#10;        &lt;/field&gt;&#10;        &#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="Inherit Existing Form View" toReformat="false" toShortenFQNames="true">
+    <variable name="inherited_record_id_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="recordName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="module" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="inherited_field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_form_social" value="&lt;div class=&quot;oe_chatter&quot;&gt;&#10;    &lt;field name=&quot;message_follower_ids&quot; widget=&quot;mail_followers&quot;/&gt;&#10;    &lt;field name=&quot;message_ids&quot; widget=&quot;mail_thread&quot;/&gt;&#10;&lt;/div&gt;" description="Add Social Messaging and followers." toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_form_title" value="&lt;div class=&quot;oe_title&quot;&gt;&#10;    &lt;label for=&quot;$fieldName$&quot; class=&quot;oe_edit_only&quot;/&gt;&#10;    &lt;h1&gt;&#10;        &lt;field name=&quot;$fieldName$&quot; placeholder=&quot;......&quot;/&gt;&#10;    &lt;/h1&gt;&#10;&lt;/div&gt;" description="Add title for the form view" toReformat="false" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_kanban" value="&lt;record id=&quot;&quot; model=&quot;ir.ui.view&quot;&gt;&#10; &lt;field name=&quot;name&quot;&gt;&lt;/field&gt;&#10;  &lt;field name=&quot;model&quot;&gt;&lt;/field&gt;&#10; &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;    &lt;kanban&gt;&#10;   &lt;field name=&quot;name&quot;/&gt;&#10; &lt;templates&gt;&#10; &lt;t t-name=&quot;kanban-box&quot;&gt;&#10; &lt;/t&gt;&#10; &lt;/templates&gt;&#10; &lt;/kanban&gt;&#10; &lt;/field&gt;&#10;&lt;/record&gt;" description="Create Kanban View" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_field_state" value="&lt;field name=&quot;state&quot; widget=&quot;statusbar&quot; statusbar_visible=&quot;&quot;/&gt;" description="Add state field with progressbar on view" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_form" value="&lt;record id=&quot;$formID$_form_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$FormID$ Form View&lt;/field&gt;&#10;    &lt;field name=&quot;model&quot;&gt;$ModelName$&lt;/field&gt;&#10;    &lt;field name=&quot;priority&quot;&gt;$priority$&lt;/field&gt;&#10;    &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;        &lt;form string=&quot;&quot;&gt;&#10;            &lt;sheet&gt;&#10;                &lt;group name=&quot;$group_name$_group&quot;&gt;&#10;                    &lt;field name=&quot;$fieldName$&quot;/&gt;&#10;                &lt;/group&gt;&#10;            &lt;/sheet&gt;&#10;        &lt;/form&gt;&#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="Create Form View" toReformat="false" toShortenFQNames="true">
+    <variable name="formID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FormID" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ModelName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="priority" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="group_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_form_header" value="&lt;header&gt;&#10;    &lt;button name=&quot;action_$buttonName$&quot; string=&quot;$ButtonString$&quot; class=&quot;oe_highlight&quot; states=&quot;&quot; type=&quot;object&quot;/&gt;&#10;    &lt;field name=&quot;state&quot; widget=&quot;statusbar&quot; statusbar_visible=&quot;&quot; statusbar_colors=&quot;{'KEY_IS_STATE':'VALUE_IS_COLOR'}&quot;/&gt;&#10;&lt;/header&gt;" description="Add Form's header with 'state' and buttons" toReformat="false" toShortenFQNames="true">
+    <variable name="buttonName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ButtonString" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_button_box" value="&lt;div class=&quot;oe_button_box&quot; name=&quot;expense_button_box&quot;&gt;&#10;        &lt;button name=&quot;toggle_active&quot; &#10;                type=&quot;object&quot;&#10;                confirm=&quot;(Un)archiving a project automatically (un)archives its tasks and issues. Do you want to proceed?&quot;&#10;                class=&quot;oe_stat_button&quot; &#10;                icon=&quot;fa-archive&quot;&gt;&#10;                &lt;field name=&quot;active&quot; widget=&quot;boolean_button&quot; options='{&quot;terminology&quot;: &quot;archive&quot;}'/&gt;&#10;        &lt;/button&gt;&#10;&lt;/div&gt;" description="Add Button Box on View" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_data" value="&lt;?xml version=&quot;1.0&quot; ?&gt;&#10;&lt;odoo&gt;&#10;    &lt;data&gt;&#10;        &#10;        &#10;    &#10;    &lt;/data&gt;&#10;&lt;/odoo&gt;" description="Create the main tags" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_declare_qweb_reports" value="&lt;!-- QWeb Reports --&gt;&#10;&lt;!-- NAME &amp; FILE_NAME should be the same --&gt;&#10;        &lt;report&#10;            id=&quot;UNIQUE_REPORT_ID&quot;&#10;            model=&quot;MODEL_WHERE_THE_REPORT_WILL_BE_PRINTED&quot;&#10;            report_type=&quot;qweb-pdf&quot;&#10;            string=&quot;LABEL&quot;&#10;            name=&quot;NAME&quot;&#10;            file=&quot;FILE_NAME&quot;&#10;        /&gt;" description="Add a declaration for new QWeb reports" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_field" value="&lt;field name=&quot;$name$&quot;/&gt;" description="Add commun field on view" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_domain" value="domain=&quot;[('', '=', ), ]&quot;" description="Add domain to your field" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_add_qweb_template" value="&lt;template id=&quot;$UniqueID$&quot;&gt;&#10;    &lt;t t-call=&quot;report.html_container&quot;&gt;&#10;        &lt;t t-call=&quot;report.internal_layout&quot;&gt;&#10;        &lt;!-- &lt;t t-call=&quot;report.external_layout&quot;&gt; --&gt;&#10;            &lt;div class=&quot;page&quot;&gt;&#10;                &lt;h2&gt;TITLE FOR YOUR REPORT&lt;/h2&gt;&#10;                &lt;!--&#10;                Build your report here!&#10;                Do it in awesome way ;)&#10;                --&gt;&#10;            &lt;/div&gt;&#10;        &lt;/t&gt;&#10;    &lt;/t&gt;&#10;&lt;/template&gt;&#10;&#10;" description="Add the main structure of the QWeb Reports" toReformat="false" toShortenFQNames="true">
+    <variable name="UniqueID" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_qweb_table" value="&lt;table class=&quot;table table-condensed&quot;&gt;&#10;    &lt;thead&gt;&#10;        &lt;tr&gt;&#10;            &lt;th&gt;HEAD_1&lt;/th&gt;&#10;            &lt;th class=&quot;text-right&quot;&gt;HEAD_2&lt;/th&gt;&#10;            &lt;th class=&quot;text-right&quot;&gt;HEAD_3&lt;/th&gt;&#10;            &lt;th class=&quot;text-right&quot;&gt;HEAD_4&lt;/th&gt;&#10;        &lt;/tr&gt;&#10;    &lt;/thead&gt;&#10;    &lt;tbody&gt;&#10;        &lt;tr t-foreach=&quot;o.OBJECTS&quot; t-as=&quot;OBJECT&quot;&gt;&#10;            &lt;t t-if=&quot;len(taxline['level']) &gt; 5&quot;&gt;&#10;                &lt;t t-set=&quot;style&quot; t-value=&quot;'font-weight:normal;'&quot;/&gt;&#10;            &lt;/t&gt;&#10;            &lt;t t-if=&quot;not len(taxline['level']) &gt; 5&quot;&gt;&#10;                &lt;t t-set=&quot;style&quot; t-value=&quot;'font-weight:bold;'&quot;/&gt;&#10;            &lt;/t&gt;&#10;&#10;            &lt;td&gt;&#10;                &lt;span t-att-style=&quot;style&quot; t-esc=&quot;taxline['level']&quot; style=&quot;color:white;&quot;/&gt;&#10;                &lt;span t-att-style=&quot;style&quot; t-if=&quot;taxline['code']&quot; t-esc=&quot;taxline['code']&quot;/&gt;&#10;                &lt;span t-att-style=&quot;style&quot; t-esc=&quot;taxline['name']&quot;/&gt;&#10;            &lt;/td&gt;&#10;            &lt;td class=&quot;text-right&quot;&gt;&lt;span t-att-style=&quot;style&quot; t-esc=&quot;taxline['debit']&quot;/&gt;&lt;/td&gt;&#10;            &lt;td class=&quot;text-right&quot;&gt;&lt;span t-att-style=&quot;style&quot; t-esc=&quot;taxline['credit']&quot;/&gt;&lt;/td&gt;&#10;            &lt;td class=&quot;text-right&quot;&gt;&#10;                &lt;span t-att-style=&quot;style&quot; t-esc=&quot;formatLang(taxline['tax_amount'], currency_obj=res_company.currency_id)&quot;/&gt;&#10;            &lt;/td&gt;&#10;        &lt;/tr&gt;        &#10;    &lt;/tbody&gt;&#10;&lt;/table&gt;&#10;" description="Add the main structure of the QWeb Tables" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="odoo_field_inherit" value="&lt;field name=&quot;$fieldName$&quot; position=&quot;$position$&quot;&gt;&#10;&#10;&lt;/field&gt;" description="Inherit field on view" toReformat="true" toShortenFQNames="true">
+    <variable name="fieldName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="enum(&quot;after&quot;,&quot;before&quot;,&quot;inside&quot;,&quot;attributes&quot;)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_search_field" value="&lt;field name=&quot;$name$&quot; string=&quot;$string$&quot;/&gt;" description="add field on Search View" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_search_filter" value="&lt;filter string=&quot;$name$&quot; name=&quot;filter_$name$&quot; domain=&quot;[('$field$', '$cond$', $value$)]&quot; help=&quot;$helpMessage$&quot; /&gt;" description="add filter on Search View" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="cond" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="helpMessage" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_search_group_by" value="&lt;filter string=&quot;$string$&quot; name=&quot;group_by_$name$&quot; domain=&quot;[]&quot; context=&quot;{'group_by':'$field$'}&quot;/&gt;" description="add groupBy on Search View" toReformat="false" toShortenFQNames="true">
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_button_cancel" value="&lt;button class=&quot;oe_link&quot; special=&quot;cancel&quot; string=&quot;Cancel&quot;/&gt;" description="Button Cancel" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+</templateSet>
