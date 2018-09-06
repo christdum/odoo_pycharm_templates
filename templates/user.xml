@@ -1,0 +1,63 @@
+<templateSet group="user">
+  <template name="viewtree" value="&lt;record id=&quot;$view_name$_tree_view&quot; model=&quot;ir.ui.view&quot;&gt;&#10;            &lt;field name=&quot;name&quot;&gt;$View_Name$ Tree View&lt;/field&gt;&#10;            &lt;field name=&quot;model&quot;&gt;$model_name$&lt;/field&gt;&#10;            &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;                &lt;tree&gt;&#10;                    &lt;field name=&quot;sequence&quot;/&gt;&#10;                    &lt;field name=&quot;name&quot;/&gt;&#10;                &lt;/tree&gt;&#10;            &lt;/field&gt;&#10;        &lt;/record&gt;" description="Tree View" toReformat="true" toShortenFQNames="true">
+    <variable name="view_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="View_Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="viewform" value="&lt;record id=&quot;$name$_view_form&quot; model=&quot;ir.ui.view&quot;&gt;&#10;            &lt;field name=&quot;name&quot;&gt;$name2$ Form&lt;/field&gt;&#10;            &lt;field name=&quot;model&quot;&gt;$model_name$&lt;/field&gt;&#10;            &lt;field name=&quot;priority&quot;&gt;10&lt;/field&gt;&#10;            &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;                &lt;form&gt;&#10;                &lt;header&gt;&lt;/header&gt;&#10;                &lt;group name=&quot;main&quot;&gt;&#10;                &#10;                &lt;/group&gt;&#10;                &lt;/form&gt;&#10;            &lt;/field&gt;&#10;&lt;/record&gt;" description="Form view Definition" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="actwindow" value="&lt;record id=&quot;$name$_action&quot; model=&quot;ir.actions.act_window&quot;&gt;&#10;            &lt;field name=&quot;name&quot;&gt;$name2$ Action&lt;/field&gt;&#10;            &lt;field name=&quot;res_model&quot;&gt;$model_name$&lt;/field&gt;&#10;            &lt;field name=&quot;view_type&quot;&gt;form&lt;/field&gt;&#10;            &lt;field name=&quot;domain&quot;&gt;[]&lt;/field&gt;&#10;            &lt;field name=&quot;view_mode&quot;&gt;tree,form&lt;/field&gt;&#10;            &lt;field name=&quot;view_id&quot; ref=&quot;$ref_view$&quot;/&gt;&#10;            &lt;!--&lt;field name=&quot;context&quot;&gt;{}&lt;/field&gt;--&gt;&#10;        &lt;/record&gt;" description="actions act_windows definition" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ref_view" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="def test" value="@openerp.tests.common.at_install(True)&#10;@openerp.tests.common.post_install(True)&#10;def test_$name$(self):&#10;    $code$&#10;    " description="Test Method" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="code" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="bt_object" value="&lt;button name=&quot;action_$name$&quot; string=&quot;$buttun_text$&quot; class=&quot;oe_highlight&quot; type=&quot;object&quot;/&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="buttun_text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="bt_cancel" value="&lt;button class=&quot;oe_link&quot; special=&quot;cancel&quot; string=&quot;Cancel&quot;/&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="viewsearch" value="&lt;record id=&quot;$name$_search&quot; model=&quot;ir.ui.view&quot;&gt;&#10;             &lt;field name=&quot;name&quot;&gt;$name2$ Search&lt;/field&gt;&#10;             &lt;field name=&quot;model&quot;&gt;$model_name$&lt;/field&gt;&#10;             &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;                 &lt;search string=&quot;Search $name3$&quot;&gt;&#10;                     &lt;field name=&quot;$field_name$&quot; string=&quot;$string$&quot;/&gt;&#10;                 &lt;/search&gt;&#10;             &lt;/field&gt;&#10;         &lt;/record&gt;" description="" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name3" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="write_rpc" value="write_demo_xml_file(file_name=&quot;$MODEL_NAME$.xml&quot;,&#10;                    records=get_data_from_odoo(connect(), model_name='$MODEL_NAME$',&#10;                                               simple_fields=[$END$],&#10;                                               eval_fields=[]))" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="MODEL_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
