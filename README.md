@@ -1,10 +1,12 @@
 # Odoo Pycharm Templates
 
+This project add file templates and code templates on Pycharm
+
+
+
 ## Installation
 
     $ git clone git@github.com:christdum/odoo_pycharm_templates.git
-
-## Usage
 
 **For Mac**
 
@@ -17,3 +19,13 @@
 
 
 **For Windows**
+
+## Usage
+
+To manage and add **file templates**, go to Menu :
+
+    Preferences... > Editor > File & Code Templates
+
+To manage and add **live templates**, go to Menu :
+
+    Preferences... > Editor > Live Templates
