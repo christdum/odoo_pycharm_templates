@@ -1,0 +1,1 @@
+# odoo_pycharm_templates
