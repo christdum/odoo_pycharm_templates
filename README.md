@@ -8,11 +8,11 @@ This project add file templates and code templates on Pycharm
 
     $ git clone git@github.com:christdum/odoo_pycharm_templates.git
 
-###Easy setup  
-1. Download `settings.jar` file: [click here](./raw/master/settings.jar)
+### Easy setup  
+1. Download `settings.jar` file: [click here](/../../raw/master/settings.jar)
 1. Go to `File | Import Settings...` in PyCharm IDE and select the downloaded `settings.jar` file. Click `OK` in the dialog that appears.
 
-###Manuel Install
+###M anuel Install
 
 
 **Linux distribution**  
