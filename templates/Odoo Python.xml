@@ -19,7 +19,7 @@
       <option name="Python" value="true" />
     </context>
   </template>
-  <template name="odoo_method_write" value="@api.multi&#10;def write(self, values):&#10;    # Add code here  &#10;    return super(ClassName, self).write(values)" description="Add a method write" toReformat="false" toShortenFQNames="true">
+  <template name="odoo_method_write" value="@api.multi&#10;def write(self, vals):&#10;    # Add code here  &#10;    return super($ClassName, self).write(vals)" description="Add a method write" toReformat="false" toShortenFQNames="true">
     <context>
       <option name="Python" value="true" />
     </context>
