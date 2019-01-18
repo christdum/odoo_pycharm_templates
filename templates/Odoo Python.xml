@@ -123,4 +123,11 @@
       <option name="Python" value="true" />
     </context>
   </template>
+  <template name="print_noviat" value="print &quot;##### NOVIAT ##### $message$: {}&quot;.format($var$)&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="message" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="var" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
 </templateSet>
